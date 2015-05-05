@@ -1,0 +1,145 @@
+// Import Bootstrap Compass integration
+@import "bootstrap-compass";
+@import "compass/css3";
+@import "compass/css3/user-interface";
+
+// Import custom Bootstrap variables
+@import "bootstrap-variables";
+
+// Import Bootstrap for Sass
+@import "bootstrap";
+
+@import "animate";
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "futura-pt", "futura-pt-1", "futura-pt-2", sans-serif;
+  font-weight: 600;
+
+  small {
+    color: inherit;
+  }
+}
+
+article.primary {
+  overflow: hidden;
+  border-top: 4px #9b5897 solid;
+  padding-top: 100px;
+  text-align: center;
+  min-height: 200px;
+  color: #fff;
+  background-color: #532d50;
+  @include background-image(linear-gradient(bottom, #41213f 0%, #583055 100%)); // gradient overlay
+  background-image: url(../images/tsunami_light.png);
+  background-size: auto;
+
+  a.logo {
+    background-image: url(../images/amber-light-large.png);
+    display: inline-block;
+    width: 226px;
+    height: 54px;
+    text-indent: -9999px;
+    margin-bottom: 30px;
+  }
+
+  @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+     a.logo {
+        background: url(../images/amber-light-large@2x.png);
+        background-size: 100%;
+     }
+  }
+
+  h1 {
+    color: #ce71c8;
+    margin: 0;
+  }
+
+  p.sub {
+    margin-top: 18px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  a.btn-primary {
+    margin-top: 20px;
+  }
+
+  //temp until code the css animation
+  img {
+    clear: both;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 983px;
+  }
+}
+
+.terminal-window {
+  text-align: left;
+  max-width: 940px;
+  height: 490px;
+  border-radius: 3px;
+  margin: auto;
+  position: relative;
+  @include box-shadow(0 0 15px rgba(50,23,48,.15)); // drop shadow
+
+  header {
+    margin-top: 96px;
+    background: #774974;
+    height: 42px;
+    border-radius: 6px 6px 0 0;
+    padding-left: 20px;
+
+    .button {
+      background-color: #e4dbe3;
+      width: 12px;
+      height: 12px;
+      margin: 15px 4px 0 0;
+      display: inline-block;
+      border-radius: 8px;
+    }
+
+  }
+
+  section.terminal {
+    color: white;
+    font-family: Menlo, Monaco, "Consolas", "Courier New", "Courier";
+    background: #321730;
+    padding: 10px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    top: 42px;
+    bottom: 0;
+    overflow: auto;
+
+    .typed-cursor {
+      opacity: 1;
+      -webkit-animation: blink 0.7s infinite;
+      -moz-animation: blink 0.7s infinite;
+      animation: blink 0.7s infinite;
+    }
+
+  }
+}
+
+@keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes blink{
+  0% { opacity:1; }
+  50% { opacity:0; }
+  100% { opacity:1; }
+}
+
+.terminal-data { display: none; }
+.terminal-window .gray {
+  white-space: pre;
+  color: gray;
+}

@@ -719,7 +719,7 @@ $(window).load(function() {
     {
       action: 'type',
       strings: [
-        'PLEASE!!!',
+        'PLEASE!!!^5000',
         ''
       ],
       postDelay: 5000

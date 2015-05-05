@@ -11,6 +11,11 @@
 
     <%= stylesheet_link_tag "all" %>
     <%= javascript_include_tag  "all" %>
+
+    <!--[if lt IE 9]>
+      <script src="javascripts/ie/html5shiv.js" type="text/javascript"></script>
+      <script src="javascripts/ie/respond.js" type="text/javascript"></script>
+    <![endif]-->
   </head>
 
   <body class="<%= page_classes %>">

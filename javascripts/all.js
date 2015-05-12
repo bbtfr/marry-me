@@ -667,7 +667,7 @@ $(window).load(function() {
     },
     {
       action: 'type',
-      strings: ['I love you more then I can describe within the limits of this tiny little story.^400'],
+      strings: ['I love you more than I can describe within the limits of this tiny little story.^400'],
       output: '&nbsp;',
       postDelay: 1000
     },
